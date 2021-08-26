@@ -5,5 +5,7 @@ public class Main {
         Console myConsole = new Console();
         myConsole.calibrate();
         myConsole.clear();
+        myConsole.delay(1000);
+        myConsole.calibrate();
     }
 }

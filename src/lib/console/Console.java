@@ -34,10 +34,19 @@ public class Console{
      * Use this to clear the console
      */
     public void clear(){
-        for (int y = 0;  y < 256; y++) {
+        for (int y = 0;  y < yLineCount; y++) {
             System.out.println();
         }
     }
 
-
+    /**
+     * Time lol func
+     */
+    public void delay(long time){
+        long targetTime = System.currentTimeMillis() + time;
+        long currentTime = System.currentTimeMillis();
+        while(targetTime >= currentTime) {
+            currentTime = System.currentTimeMillis();
+        }
+    }
 }
